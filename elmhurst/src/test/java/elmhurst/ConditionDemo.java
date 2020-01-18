@@ -2,10 +2,9 @@ package elmhurst;
 
 public class ConditionDemo {
 	
-	//static boolean a;
-	//public boolean b;
+	static boolean a;
+	public boolean b;
 	
-	static int a;
 	public void apple() {
 	
 		
@@ -16,7 +15,7 @@ public class ConditionDemo {
 		
 		
 		System.out.println(a);
-		//System.out.println(b);
+		System.out.println(b);
 	}
 
 }
