@@ -31,10 +31,10 @@ public class Amazon {
 		driver.findElement(By.xpath("//*[@id=\"nav-search\"]/form/div[2]/div/input")).click();
 		
 		driver.findElement(By.id("nav-hamburger-menu")).click();
-		//driver.findElement(By.xpath("//*[@id=\"hmenu-content\"]/ul[35]/li[47]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"hmenu-content\"]/ul[35]/li[47]/a")).click();
 		//System.out.println(driver.getTitle());
 		
-		//driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]/span[1]"))
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
 		//driver.findElement(By.id("nav-item-signOut")).click();
 
