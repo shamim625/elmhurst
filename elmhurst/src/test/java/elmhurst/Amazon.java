@@ -18,7 +18,7 @@ public class Amazon {
 		driver.get("https://www.amazon.com/");
 		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]/span[1]")).click();
 		driver.findElement(By.name("email")).sendKeys("ahmedshamim725@yahoo.com");
 		driver.findElement(By.xpath("//*[@id=\"continue\"]")).click();

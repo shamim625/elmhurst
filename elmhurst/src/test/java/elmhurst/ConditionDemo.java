@@ -15,7 +15,7 @@ public class ConditionDemo {
 		
 		
 		System.out.println(a);
-		System.out.println(b);
+		
 	}
 
 }

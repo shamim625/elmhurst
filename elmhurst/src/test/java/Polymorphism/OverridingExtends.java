@@ -1,4 +1,4 @@
-package elmhurst;
+package Polymorphism;
 
 public class OverridingExtends extends Overriding {
 	

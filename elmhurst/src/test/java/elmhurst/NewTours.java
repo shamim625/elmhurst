@@ -28,7 +28,7 @@ public class NewTours {
 		driver.findElement(By.name("login")).click();
 		System.out.println(driver.getTitle());
 		
-		
+	//Using webelement to choose radio options
 	    WebElement radio1= driver.findElement(By.xpath("//input[@value='roundtrip']"));
 	    WebElement radio2= driver.findElement(By.xpath("//input[@value='oneway']"));
 	    radio2.click();
@@ -52,8 +52,12 @@ public class NewTours {
 	    serviceclass.click();
 	    Select airline =new Select(driver.findElement(By.xpath("//select[@name='airline']")));
 	    airline.selectByVisibleText("Unified Airlines");
+	    
+// clcking finding flights
 	    driver.findElement(By.xpath("//input[@name='findFlights']")).click();
 		System.out.println(driver.getTitle());
+		
+		
 		WebElement depart=driver.findElement(By.xpath("//input[@value='Pangea Airlines$362$274$9:17']"));
 		depart.click();
 		WebElement returnflight= driver.findElement(By.xpath("//input[@value='Pangea Airlines$632$282$16:37']"));
@@ -65,8 +69,25 @@ public class NewTours {
 		last1.sendKeys("Ahmed");
 		Select meal=new Select(driver.findElement(By.xpath("//select[@name='pass.0.meal']")));
 		meal.selectByVisibleText("Muslim");
-		Select card =new Select(driver.findElement(By.xpath("//select[@'creditCard']")));
+		Select card =new Select(driver.findElement(By.xpath("//select[@name='creditCard']")));
 		card.selectByVisibleText("Visa");
+		driver.findElement(By.xpath("//input[@name='creditnumber']")).sendKeys("23832474793469274");
+		Select expmn = new Select (driver.findElement(By.xpath("//select[@name='cc_exp_dt_mn']")));
+		expmn.selectByIndex(9);
+		Select expyr = new Select (driver.findElement(By.xpath("//select[@name='cc_exp_dt_yr']")));
+		expyr.selectByValue("2008");
+		driver.findElement(By.xpath("//input[@name='ticketLess']")).click();
+		driver.findElement(By.xpath("//input[@name='ticketLess']")).click();
+		
+		//BuyFlight
+		driver.findElement(By.xpath("//input[@name='buyFlights']")).click();
+		
+		//Logout
+		driver.findElement(By.xpath("//img[@src='/images/forms/Logout.gif']")).click();
+		
+		System.out.println("After Logout:"+driver.getTitle());
+		
+		driver.close();
 	
 
 	}
