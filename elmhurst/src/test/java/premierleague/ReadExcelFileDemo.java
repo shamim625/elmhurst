@@ -1,4 +1,4 @@
-package com.smarttech.premierleague;
+package premierleague;
 
 import java.io.File;  
 import java.io.FileInputStream;
